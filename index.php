@@ -330,17 +330,17 @@ function Validatenowy_wezel()
 </head>
 <body>
 <div id="container">
-<div id="wb_wczytaj_baze" style="position:absolute;left:348px;top:859px;width:148px;height:52px;z-index:49;">
+<div id="wb_wczytaj_baze" style="position:absolute;left:348px;top:857px;width:148px;height:52px;z-index:49;">
 <form name="wczytaj_baze" method="post" action="./index.php" id="wczytaj_baze">
 <input type="hidden" name="form_name" value="wczytaj_baze">
 <input type="submit" id="Button6" name="" value="Zresetuj drzewo" style="position:absolute;left:0px;top:13px;width:148px;height:39px;z-index:0;" tabindex="11">
 </form>
 </div>
-<input type="text" id="search" style="position:absolute;left:522px;top:871px;width:253px;height:30px;z-index:50;" name="search" value="" maxlength="250" tabindex="12" autocomplete="off" spellcheck="false">
-<div id="Html3" style="position:absolute;left:0px;top:272px;width:994px;height:564px;overflow:auto;z-index:51">
+<input type="text" id="search" style="position:absolute;left:522px;top:869px;width:253px;height:30px;z-index:50;" name="search" value="" maxlength="250" tabindex="12" autocomplete="off" spellcheck="false">
+<div id="Html3" style="position:absolute;left:0px;top:270px;width:994px;height:564px;overflow:auto;z-index:51">
 <div id="tree-container"></div></div>
-<div id="Layer5" style="position:absolute;text-align:left;left:0px;top:0px;width:994px;height:262px;z-index:52;">
-<div id="Layer4" style="position:absolute;text-align:left;left:0px;top:21px;width:231px;height:241px;z-index:17;">
+<div id="Layer5" style="position:absolute;text-align:left;left:0px;top:19px;width:994px;height:241px;z-index:52;">
+<div id="Layer4" style="position:absolute;text-align:left;left:0px;top:0px;width:231px;height:241px;z-index:17;">
 <div id="wb_nowy_wezel" style="position:absolute;left:0px;top:15px;width:221px;height:208px;z-index:6;">
 <form name="nowy_wezel" method="post" action="./index.php" id="nowy_wezel" onsubmit="return Validatenowy_wezel()">
 <input type="hidden" name="form_name" value="nowy_wezel">
@@ -348,15 +348,15 @@ function Validatenowy_wezel()
 <select name="rodzic" size="1" id="rodzic" style="position:absolute;left:0px;top:109px;width:210px;height:33px;z-index:2;" tabindex="2">
 <option selected>Wybierz...</option>
 </select>
-<div id="wb_Text7" style="position:absolute;left:0px;top:78px;width:135px;height:18px;z-index:3;">
+<div id="wb_Text7" style="position:absolute;left:0px;top:80px;width:135px;height:18px;z-index:3;">
 <span style="color:#000000;font-family:Arial;font-size:15px;"><strong>Rodzic węzła:</strong></span></div>
-<input type="text" id="nazwa" style="position:absolute;left:0px;top:30px;width:192px;height:23px;z-index:4;" name="nazwa" value="" maxlength="250" tabindex="1" autocomplete="off" spellcheck="false">
-<div id="wb_Text8" style="position:absolute;left:0px;top:0px;width:183px;height:18px;z-index:5;">
+<input type="text" id="nazwa" style="position:absolute;left:0px;top:32px;width:192px;height:23px;z-index:4;" name="nazwa" value="" maxlength="250" tabindex="1" autocomplete="off" spellcheck="false">
+<div id="wb_Text8" style="position:absolute;left:0px;top:3px;width:183px;height:18px;z-index:5;">
 <span style="color:#000000;font-family:Arial;font-size:15px;"><strong>Nazwa nowego węzła:</strong></span></div>
 </form>
 </div>
 </div>
-<div id="Layer1" style="position:absolute;text-align:left;left:242px;top:99px;width:247px;height:162px;z-index:18;">
+<div id="Layer1" style="position:absolute;text-align:left;left:242px;top:78px;width:247px;height:162px;z-index:18;">
 <div id="wb_zmien_rodzica" style="position:absolute;left:19px;top:9px;width:210px;height:136px;z-index:10;">
 <form name="zmien_rodzica" method="post" action="./index.php" id="zmien_rodzica" onsubmit="return Validatezmien_rodzica()">
 <input type="hidden" name="form_name" value="zmien_rodzica">
@@ -365,24 +365,24 @@ function Validatenowy_wezel()
 <option selected>Wybierz...</option>
 </select>
 <input type="submit" id="Button4" name="" value="Przenieś węzeł" style="position:absolute;left:0px;top:90px;width:210px;height:39px;z-index:8;" tabindex="5">
-<div id="wb_Text5" style="position:absolute;left:0px;top:7px;width:183px;height:18px;z-index:9;">
+<div id="wb_Text5" style="position:absolute;left:0px;top:8px;width:183px;height:18px;z-index:9;">
 <span style="color:#000000;font-family:Arial;font-size:15px;"><strong>Nowy rodzic węzła:</strong></span></div>
 </form>
 </div>
 </div>
-<div id="Layer3" style="position:absolute;text-align:left;left:503px;top:99px;width:247px;height:162px;z-index:19;">
+<div id="Layer3" style="position:absolute;text-align:left;left:503px;top:78px;width:247px;height:162px;z-index:19;">
 <div id="wb_Form1" style="position:absolute;left:19px;top:9px;width:210px;height:136px;z-index:14;">
 <form name="nowa_nazwa" method="post" action="./index.php" id="Form1" onsubmit="return Validatenowa_nazwa()">
 <input type="hidden" name="form_name" value="nowa_nazwa">
 <input type="hidden" name="id_wezla" value="" id="id_wezla3">
 <input type="submit" id="Button5" name="" value="Zmień nazwę" style="position:absolute;left:0px;top:90px;width:210px;height:39px;z-index:11;" tabindex="7">
-<div id="wb_Text6" style="position:absolute;left:0px;top:7px;width:183px;height:18px;z-index:12;">
+<div id="wb_Text6" style="position:absolute;left:0px;top:8px;width:183px;height:18px;z-index:12;">
 <span style="color:#000000;font-family:Arial;font-size:15px;"><strong>Nowa nazwa węzła:</strong></span></div>
 <input type="text" id="nowa_nazwa" style="position:absolute;left:0px;top:37px;width:192px;height:23px;z-index:13;" name="nowa_nazwa" value="" maxlength="250" autocomplete="off" spellcheck="false" title="6">
 </form>
 </div>
 </div>
-<div id="Layer2" style="position:absolute;text-align:left;left:761px;top:180px;width:232px;height:81px;z-index:20;">
+<div id="Layer2" style="position:absolute;text-align:left;left:761px;top:159px;width:232px;height:81px;z-index:20;">
 <div id="wb_usun_wezel" style="position:absolute;left:13px;top:11px;width:219px;height:53px;z-index:16;">
 <form name="usun_wezel" method="post" action="./index.php" id="usun_wezel">
 <input type="hidden" name="form_name" value="usun_wezel">
@@ -394,7 +394,7 @@ function Validatenowy_wezel()
 </div>
 
 
-<div id="Html4" style="position:absolute;left:1039px;top:420px;width:100px;height:100px;z-index:55">
+<div id="Html4" style="position:absolute;left:1039px;top:418px;width:100px;height:100px;z-index:55">
 <script>
 
 // Przegląda drzewo w poszukiwaniu danego wyrażenia
@@ -459,9 +459,9 @@ nowy_rodzic.add(option2);
 
 
 
-<input type="button" id="Button2" onclick="rozwinDrzewo();return false;" name="" value="Rozwiń drzewo" style="position:absolute;left:0px;top:871px;width:148px;height:40px;z-index:59;" tabindex="9">
-<input type="button" id="Button3" onclick="zwinDrzewo();return false;" name="" value="Zwiń drzewo" style="position:absolute;left:174px;top:871px;width:148px;height:40px;z-index:60;" tabindex="10">
-<input type="button" id="Button8" onclick="przeszukajDrzewo();return false;" name="" value="Wyszukaj w drzewie" style="position:absolute;left:783px;top:871px;width:210px;height:40px;z-index:61;" tabindex="13">
+<input type="button" id="Button2" onclick="rozwinDrzewo();return false;" name="" value="Rozwiń drzewo" style="position:absolute;left:0px;top:869px;width:148px;height:40px;z-index:59;" tabindex="9">
+<input type="button" id="Button3" onclick="zwinDrzewo();return false;" name="" value="Zwiń drzewo" style="position:absolute;left:174px;top:869px;width:148px;height:40px;z-index:60;" tabindex="10">
+<input type="button" id="Button8" onclick="przeszukajDrzewo();return false;" name="" value="Wyszukaj w drzewie" style="position:absolute;left:783px;top:869px;width:210px;height:40px;z-index:61;" tabindex="13">
 </div>
 <script>
 
