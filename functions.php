@@ -2,17 +2,21 @@
 
 error_reporting(0);
 
+// Nazwa tabeli ze strukturą drzewiastą
+
 $nazwa_tabeli = "countries";
+
+// Nawiązuje połączenie z bazą danych
 
 function polaczDB() {
 
-$servername = "localhost";
-$dbname = "countries";
-$username = "root";
-$password = "";
+$nazwa_serwera = "localhost";
+$nazwa_bazy = "countries";
+$uzytkownik = "root";
+$haslo = "";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($nazwa_serwera, $uzytkownik, $haslo, $nazwa_bazy);
 mysqli_set_charset($conn, "utf8");
 
 if ($conn->connect_error) {
