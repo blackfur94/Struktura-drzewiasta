@@ -86,7 +86,6 @@ if(isset($_POST['id_wezla']) && $_POST['id_wezla'] != null) {
 	
 $id_wezla = $_POST['id_wezla']; 
 
-if($id_wezla != 1) {
 	
 $usunieto = 0;
 $conn = polaczDB();
@@ -100,13 +99,6 @@ $conn = polaczDB();
 		
 	}
 		
-	
-} else {
-		$message = "Nie można usunąć korzenia";	
-}	
-	
-
-
 	
 	
 	
@@ -517,7 +509,11 @@ if ($result->num_rows > 0) {
 echo "<script> dodajDoListy('{$nazwa}', {$id}); </script>";
 			
     }
-} 
+} else {
+	
+echo "<script> dodajDoListy('Brak (korzeń)', '0'); </script>";
+	
+}
  
   
 ?>
