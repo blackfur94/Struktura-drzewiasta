@@ -330,14 +330,14 @@ function Validatenowy_wezel()
 </head>
 <body>
 <div id="container">
-<div id="wb_wczytaj_baze" style="position:absolute;left:348px;top:858px;width:148px;height:52px;z-index:49;">
+<div id="wb_wczytaj_baze" style="position:absolute;left:348px;top:859px;width:148px;height:52px;z-index:49;">
 <form name="wczytaj_baze" method="post" action="./index.php" id="wczytaj_baze">
 <input type="hidden" name="form_name" value="wczytaj_baze">
 <input type="submit" id="Button6" name="" value="Zresetuj drzewo" style="position:absolute;left:0px;top:13px;width:148px;height:39px;z-index:0;">
 </form>
 </div>
-<input type="text" id="search" style="position:absolute;left:522px;top:870px;width:249px;height:30px;z-index:50;" name="search" value="" maxlength="250" autocomplete="off" spellcheck="false">
-<div id="Html3" style="position:absolute;left:0px;top:273px;width:994px;height:564px;overflow:auto;z-index:51">
+<input type="text" id="search" style="position:absolute;left:522px;top:871px;width:249px;height:30px;z-index:50;" name="search" value="" maxlength="250" autocomplete="off" spellcheck="false">
+<div id="Html3" style="position:absolute;left:0px;top:272px;width:994px;height:564px;overflow:auto;z-index:51">
 <div id="tree-container"></div></div>
 <div id="Layer5" style="position:absolute;text-align:left;left:0px;top:0px;width:994px;height:262px;z-index:52;">
 <div id="Layer4" style="position:absolute;text-align:left;left:0px;top:21px;width:231px;height:241px;z-index:17;">
@@ -448,9 +448,9 @@ nowy_rodzic.add(option2);
 
 
 
-<input type="button" id="Button2" onclick="rozwinDrzewo();return false;" name="" value="Rozwiń drzewo" style="position:absolute;left:0px;top:870px;width:148px;height:40px;z-index:59;">
-<input type="button" id="Button3" onclick="zwinDrzewo();return false;" name="" value="Zwiń drzewo" style="position:absolute;left:174px;top:870px;width:148px;height:40px;z-index:60;">
-<input type="button" id="Button8" onclick="przeszukajDrzewo();return false;" name="" value="Wyszukaj w drzewie" style="position:absolute;left:783px;top:870px;width:210px;height:40px;z-index:61;">
+<input type="button" id="Button2" onclick="rozwinDrzewo();return false;" name="" value="Rozwiń drzewo" style="position:absolute;left:0px;top:871px;width:148px;height:40px;z-index:59;">
+<input type="button" id="Button3" onclick="zwinDrzewo();return false;" name="" value="Zwiń drzewo" style="position:absolute;left:174px;top:871px;width:148px;height:40px;z-index:60;">
+<input type="button" id="Button8" onclick="przeszukajDrzewo();return false;" name="" value="Wyszukaj w drzewie" style="position:absolute;left:783px;top:871px;width:210px;height:40px;z-index:61;">
 </div>
 <script>
 
