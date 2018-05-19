@@ -19,7 +19,7 @@ if($id_wezla == 1) {
 	
 	$conn = polaczDB();
 
-$query = "SELECT id, parent_id FROM countries WHERE id = '{$id_wezla}';";
+$query = "SELECT id, parent_id FROM {$nazwa_tabeli} WHERE id = '{$id_wezla}';";
 
 $result = queryDB($conn,$query);
 
@@ -39,7 +39,7 @@ $message = "Węzeł jest już potomkiem wybranego rodzica";
 } else {
 	
 	
-$query = "UPDATE countries SET parent_id = '{$id_nowego_rodzica}' WHERE id = '{$id_wezla}';";
+$query = "UPDATE {$nazwa_tabeli} SET parent_id = '{$id_nowego_rodzica}' WHERE id = '{$id_wezla}';";
 
 $result = queryDB($conn,$query);
 if(mysqli_affected_rows($conn) > 0) {
@@ -134,7 +134,7 @@ $nowa_nazwa = $_POST['nowa_nazwa'];
 
 $conn = polaczDB();
 
-$query = "UPDATE countries SET text = '{$nowa_nazwa}' WHERE ID = {$id_wezla};";
+$query = "UPDATE {$nazwa_tabeli} SET text = '{$nowa_nazwa}' WHERE ID = {$id_wezla};";
 $result = queryDB($conn,$query);
 if(mysqli_affected_rows($conn) > 0) {
 	
@@ -170,7 +170,7 @@ $rodzic = $_POST['rodzic'];
 $nazwa = $_POST['nazwa'];
 
 $conn = polaczDB();
-$query = "INSERT INTO countries(text,parent_id) VALUES ('{$nazwa}', '{$rodzic}');";
+$query = "INSERT INTO {$nazwa_tabeli}(text,parent_id) VALUES ('{$nazwa}', '{$rodzic}');";
 $result = queryDB($conn,$query);
 
 if(mysqli_affected_rows($conn) > 0) {
@@ -248,28 +248,28 @@ function Validatenowa_nazwa()
    var nowa_nazwa = document.getElementById('nowa_nazwa');
    if (!(nowa_nazwa.disabled || nowa_nazwa.style.display === 'none' || nowa_nazwa.style.visibility === 'hidden'))
    {
-      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f]*$/;
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f0-9-]*$/;
       if (!regexp.test(nowa_nazwa.value))
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nowa_nazwa.focus();
          return false;
       }
       if (nowa_nazwa.value == "")
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nowa_nazwa.focus();
          return false;
       }
       if (nowa_nazwa.value.length < 1)
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nowa_nazwa.focus();
          return false;
       }
       if (nowa_nazwa.value.length > 250)
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nowa_nazwa.focus();
          return false;
       }
@@ -302,28 +302,28 @@ function Validatenowy_wezel()
    var nazwa = document.getElementById('nazwa');
    if (!(nazwa.disabled || nazwa.style.display === 'none' || nazwa.style.visibility === 'hidden'))
    {
-      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f]*$/;
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f0-9-]*$/;
       if (!regexp.test(nazwa.value))
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nazwa.focus();
          return false;
       }
       if (nazwa.value == "")
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nazwa.focus();
          return false;
       }
       if (nazwa.value.length < 1)
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nazwa.focus();
          return false;
       }
       if (nazwa.value.length > 250)
       {
-         alert("Nazwa może zawierać litery i spacje");
+         alert("Nazwa może zawierać litery, cyfry i spacje");
          nazwa.focus();
          return false;
       }
@@ -504,7 +504,7 @@ ustawIdWezla(idWezla);
   
 // Pobiera nazwy węzłów z bazy danych
 
-$query = "SELECT text, id FROM countries;";
+$query = "SELECT text, id FROM {$nazwa_tabeli};";
 
 $conn = polaczDB();
 $result = queryDB($conn,$query);
