@@ -2,7 +2,7 @@
 
 error_reporting(0);
 
-// Łączenie z bazą danych MySQL
+$nazwa_tabeli = "countries";
 
 function polaczDB() {
 

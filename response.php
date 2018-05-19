@@ -1,21 +1,15 @@
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "countries";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Błąd połączenia: " . mysqli_connect_error());
-mysqli_set_charset($conn, "utf8");
-/* check connection */
-if (mysqli_connect_errno()) {
-    printf("Nie udalo sie nawiązać połączenia: %s\n", mysqli_connect_error());
-    exit();
-}
-$sql = "SELECT * FROM `countries` ";
-$res = mysqli_query($conn, $sql) or die("Błąd bazy danych:". mysqli_error($conn));
-	//iterate on results row and create new index array of data
-	while( $row = mysqli_fetch_assoc($res) ) { 
+require_once("functions.php");
+
+$conn = polaczDB();
+
+$query = "SELECT * FROM {$nazwa_tabeli} ";
+
+$result = queryDB($conn,$query);
+
+    while($row = $result->fetch_assoc()) {
 		$data[] = $row;
 	}
 	$itemsByReference = array();
