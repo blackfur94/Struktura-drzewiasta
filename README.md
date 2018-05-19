@@ -2,10 +2,11 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 
 - Dodawanie nowych węzłów do drzewa
 - Rekursywne usuwanie węzłów z drzewa
-- Edycję nazwy węzłów
 - Przenoszenie węzłów do innych gałęzi
-- Rozwijanie / zwijanie gałęzi drzewa
-- Wyszukiwanie węzła w drzewie po nazwie
+- Edycję nazwy węzłów
+- Wyszukiwanie węzłów po nazwie
+- Rozwijanie drzewa i wybranych gałęzi
+
 
 # Demo
 
