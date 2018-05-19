@@ -1,4 +1,4 @@
-Aplikacja webowa do arządzania strukturą drzewiastą, umożliwiająca:
+Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 
 - Dodawanie nowych węzłów do drzewa
 - Rekursywne usuwanie węzłów z drzewa
