@@ -34,7 +34,49 @@ if($id_wezla == $id_nowego_rodzica) {
 	$message = "Wybrano ten sam węzeł";
 } elseif($id_rodzica_wezla == $id_nowego_rodzica) {
 	
-$message = "Węzeł jest już potomkiem wybranego rodzica";	
+$message = "Węzeł jest już dzieckiem tego rodzica";	
+	
+} else {
+	
+	
+// Sprawdza czy węzeł nie jest przenoszony do niższego poziomu w tej samej gałęzi
+	
+$query = "SELECT GROUP_CONCAT(lv SEPARATOR ',') AS potomkowie FROM (SELECT @pv:=(SELECT GROUP_CONCAT(id SEPARATOR ',')".
+" FROM countries WHERE parent_id IN (@pv)) AS lv FROM countries".
+" JOIN (SELECT @pv:={$id_wezla})tmp WHERE parent_id IN (@pv)) a;";
+
+$result = queryDB($conn,$query);
+$ok = 1;
+if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) { 
+	break;
+	}
+	
+	$potomkowie = $row['potomkowie'];
+
+$potomkowie_tablica = explode(",", $potomkowie);
+
+if (in_array($id_nowego_rodzica, $potomkowie_tablica)) {
+$message = "Nie można przenieść węzła do niższego poziomu w tej samej gałęzi";
+} else {
+	
+	// Zamienia w bazie danych wartość pola 'parent_id' wybranego węzła na ID nowego rodzica.
+	
+$query = "UPDATE {$nazwa_tabeli} SET parent_id = '{$id_nowego_rodzica}' WHERE id = '{$id_wezla}';";
+
+$result = queryDB($conn,$query);
+if(mysqli_affected_rows($conn) > 0) {
+$message = "Węzeł został przeniesiony";	
+} else {
+$message = "Wystąpił błąd podczas przenoszenia węzła";	
+	
+}	
+	
+}
+
+	
+	
 	
 } else {
 	
@@ -49,7 +91,16 @@ $message = "Węzeł został przeniesiony";
 } else {
 $message = "Wystąpił błąd podczas przenoszenia węzła";	
 	
+}	
+	
 }
+	
+	
+$result = queryDB($conn,$query);
+	
+	
+	
+
 	
 }
 
