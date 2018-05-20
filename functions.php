@@ -92,16 +92,6 @@ echo '<script>
 }
 
 
-// Przekierowuje pod inny adres
-
-
-function przekierowanie($adres) {
-	
-	header('Location: '.$adres);
-	exit;  
-
-}
-
 // Rekursywnie usuwa węzły z drzewa w bazie danych
 
 
