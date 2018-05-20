@@ -380,11 +380,11 @@ function Validatenowy_wezel()
 </div>
 </div>
 <div id="Layer3" style="position:absolute;text-align:left;left:503px;top:78px;width:247px;height:162px;z-index:19;">
-<div id="wb_Form1" style="position:absolute;left:19px;top:9px;width:210px;height:136px;z-index:14;">
-<form name="nowa_nazwa" method="post" action="./index.php" id="Form1" onsubmit="return Validatenowa_nazwa()">
+<div id="wb_nowa_nazwa_form" style="position:absolute;left:19px;top:9px;width:210px;height:136px;z-index:14;">
+<form name="nowa_nazwa" method="post" action="./index.php" id="nowa_nazwa_form" onsubmit="return Validatenowa_nazwa()">
 <input type="hidden" name="form_name" value="nowa_nazwa">
 <input type="hidden" name="id_wezla" value="" id="id_wezla3">
-<input type="submit" id="Button5" name="" value="Zmień nazwę" style="position:absolute;left:0px;top:90px;width:210px;height:39px;z-index:11;" tabindex="7">
+<input type="button" id="Button5" onclick="submitNowaNazwa();return false;" name="" value="Zmień nazwę" style="position:absolute;left:0px;top:90px;width:210px;height:39px;z-index:11;" tabindex="7">
 <div id="wb_Text6" style="position:absolute;left:0px;top:8px;width:183px;height:18px;z-index:12;">
 <span style="color:#000000;font-family:Arial;font-size:15px;"><strong>Nowa nazwa węzła:</strong></span></div>
 <input type="text" id="nowa_nazwa" style="position:absolute;left:0px;top:37px;width:192px;height:23px;z-index:13;" name="nowa_nazwa" value="" maxlength="250" autocomplete="off" spellcheck="false" title="6">
@@ -396,7 +396,7 @@ function Validatenowy_wezel()
 <form name="usun_wezel" method="post" action="./index.php" id="usun_wezel">
 <input type="hidden" name="form_name" value="usun_wezel">
 <input type="hidden" name="id_wezla" value="" id="id_wezla2">
-<input type="submit" id="Button7" name="" value="Usuń węzeł" style="position:absolute;left:9px;top:7px;width:210px;height:39px;z-index:15;" tabindex="8">
+<input type="button" id="Button7" onclick="submitUsunWezel();return false;" name="" value="Usuń węzeł" style="position:absolute;left:9px;top:7px;width:210px;height:39px;z-index:15;" tabindex="8">
 </form>
 </div>
 </div>
@@ -405,6 +405,48 @@ function Validatenowy_wezel()
 
 <div id="Html4" style="position:absolute;left:1039px;top:418px;width:100px;height:100px;z-index:55">
 <script>
+
+
+// Sprawdza poprawność danych i wysyła formularz z żądaniem zmiany nazwy węzła
+
+function submitNowaNazwa() {
+	
+
+    var id = document.getElementById("id_wezla3").value;
+
+if(id == "") {
+	
+	alert("Nie wybrano żadnego węzła");
+	
+} else {
+	  var ok = Validatenowa_nazwa();
+	  if(ok == true) {
+		  document.getElementById("nowa_nazwa_form").submit();
+	  }
+}
+
+	
+}
+
+// Sprawdza czy został wybrany węzeł i wysyła formularz z żądaniem jego usunięcia
+
+function submitUsunWezel() {
+	
+
+    var id = document.getElementById("id_wezla2").value;
+
+if(id == "") {
+	
+	alert("Nie wybrano żadnego węzła");
+	
+} else {
+
+		  document.getElementById("usun_wezel").submit();
+	  
+}
+
+	
+}
 
 // Przegląda drzewo w poszukiwaniu danego wyrażenia
 
