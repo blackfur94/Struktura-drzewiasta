@@ -1,3 +1,5 @@
+# Struktura drzewiasta
+
 Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 
 - Dodawanie nowych węzłów do drzewa
@@ -7,7 +9,7 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 - Wyszukiwanie węzłów po nazwie
 - Rozwijanie drzewa i wybranych gałęzi
 
-# Wykorzystane technologie i biblioteki:
+# Wykorzystane technologie i biblioteki
 
 - PHP 7
 - MySQL 5.7
@@ -20,7 +22,7 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 
 ![Alt text](/screenshots/1.png?raw=true "Optional Title")
 
-# Konfiguracja bazy danych:
+# Konfiguracja bazy danych
 
 Aplikacja pobiera dane z działającej lokalnie bazy MySQL zawierającej tabelę o naastępującej strukturze:
 
