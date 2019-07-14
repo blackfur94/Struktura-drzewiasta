@@ -28,6 +28,4 @@ Aplikacja pobiera dane z działającej lokalnie bazy MySQL zawierającej tabelę
 
 Dane dostępowe można edytować w pliku [functions.php](functions.php).
 
-<img src="images/functions.jpg">
-
-Przykładową bazę danych można pobrać [tutaj](countries.sql).
+Bazę danych można pobrać [tutaj](countries.sql).
