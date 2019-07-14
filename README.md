@@ -21,13 +21,3 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 # Zrzuty ekranu
 
 ![Alt text](/screenshots/1.png?raw=true "Optional Title")
-
-# Konfiguracja bazy danych
-
-Aplikacja pobiera dane z działającej lokalnie bazy MySQL zawierającej tabelę o naastępującej strukturze:
-
-<img src="images/table.jpg">
-
-Dane dostępowe można edytować w pliku [functions.php](functions.php).
-
-Bazę danych można pobrać [tutaj](countries.sql).
