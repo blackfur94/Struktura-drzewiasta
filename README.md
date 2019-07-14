@@ -1,3 +1,5 @@
+# Opis:
+
 Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 
 - Dodawanie nowych węzłów do drzewa
