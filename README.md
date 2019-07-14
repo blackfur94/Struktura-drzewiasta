@@ -7,10 +7,6 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 - Wyszukiwanie węzłów po nazwie
 - Rozwijanie drzewa i wybranych gałęzi
 
-# Zrzuty ekranu
-
-![Alt text](/screenshots/1.png?raw=true "Optional Title")
-
 # Wykorzystane technologie i biblioteki:
 
 - PHP 7
@@ -19,6 +15,10 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 - HTML 5
 - CSS
 - [jsTree](https://www.jstree.com/)
+
+# Zrzuty ekranu
+
+![Alt text](/screenshots/1.png?raw=true "Optional Title")
 
 # Konfiguracja bazy danych:
 
