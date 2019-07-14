@@ -7,10 +7,9 @@ Aplikacja webowa do zarządzania strukturą drzewiastą, umożliwiająca:
 - Wyszukiwanie węzłów po nazwie
 - Rozwijanie drzewa i wybranych gałęzi
 
+# Zrzuty ekranu
 
-# Demo
-
-[Przejdź do strony z aplikacją](http://80.211.246.214/tree)
+![Alt text](/screenshots/1.png?raw=true "Optional Title")
 
 # Wykorzystane technologie i biblioteki:
 
