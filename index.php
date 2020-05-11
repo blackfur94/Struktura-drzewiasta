@@ -384,7 +384,7 @@ function Validatenowy_wezel()
 }
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script charset="utf8" src="jquery-3.3.1.min"></script>
+<script charset="utf8" src="jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="dist/style.min.css" />
 <script src="dist/jstree.min.js"></script>
 </head>
